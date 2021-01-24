@@ -22,10 +22,7 @@ public class GenerateNext : MonoBehaviour
         {
             foreach (Transform position in accessoryPositions)
             {
-                if (levelBuilder.RegisterTile(position))
-                {
-                    PlaceTile(position, accessories);
-                }
+                levelBuilder.RegisterTile(position, accessories);
             }
         }
         
@@ -37,28 +34,17 @@ public class GenerateNext : MonoBehaviour
                 if (accessories.Length > 0)
                 {
                     if (accessoryPositions.Length == 0)
-                        PlaceTile(position, accessories);
+                        levelBuilder.PlaceTile(position, accessories);
                 }
                 else
                 {
-                    if (levelBuilder.RegisterTile(position))
-                        PlaceTile(position, successors);
+                    levelBuilder.RegisterTile(position, successors);
                 }
             }
             else
             {
-                if (levelBuilder.RegisterTile(position))
-                    PlaceTile(position, successors);
+                levelBuilder.RegisterTile(position, successors);
             }
         }
-    }
-
-    private void PlaceTile(Transform position, GameObject[] pool)
-    {
-        int p = UnityEngine.Random.Range(0, pool.Length);
-        GameObject go = Instantiate(pool[p]);
-        go.transform.parent = position;
-        go.transform.localPosition = Vector3.zero;
-        go.transform.localRotation = Quaternion.identity;
     }
 }
