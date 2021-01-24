@@ -27,7 +27,7 @@ public class LevelBuilder : MonoBehaviour
         currentTiles++;
     }
 
-    public bool RegisterTile(Transform t, GameObject[] pool)
+    public bool RegisterTile(Transform t, bool overrideCount = false)
     {
         string name = Mathf.RoundToInt(t.position.x / distance) + "," + Mathf.RoundToInt(t.position.z / distance);
         if (transform.Find(name))
@@ -41,20 +41,10 @@ public class LevelBuilder : MonoBehaviour
                 t.name = name;
                 t.parent = this.transform;
                 currentTiles++;
-                PlaceTile(t, pool);
                 return true;
             }
             else
                 return false;
         }
-    }
-
-    public void PlaceTile(Transform position, GameObject[] pool)
-    {
-        int p = UnityEngine.Random.Range(0, pool.Length);
-        GameObject go = Instantiate(pool[p]);
-        go.transform.parent = position;
-        go.transform.localPosition = Vector3.zero;
-        go.transform.localRotation = Quaternion.identity;
     }
 }
