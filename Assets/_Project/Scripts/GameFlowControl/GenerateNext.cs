@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GenerateNext : MonoBehaviour
@@ -19,7 +18,7 @@ public class GenerateNext : MonoBehaviour
 
     private void Start()
     {
-        if(accessoryPositions.Count() > 0)
+        if(accessoryPositions.Length > 0)
         {
             foreach (Transform position in accessoryPositions)
             {
@@ -35,9 +34,9 @@ public class GenerateNext : MonoBehaviour
             int c = UnityEngine.Random.Range(0, 2);
             if (c > 0)
             {
-                if (accessories.Count() > 0)
+                if (accessories.Length > 0)
                 {
-                    if (accessoryPositions.Count() == 0)
+                    if (accessoryPositions.Length == 0)
                         PlaceTile(position, accessories);
                 }
                 else
@@ -56,7 +55,7 @@ public class GenerateNext : MonoBehaviour
 
     private void PlaceTile(Transform position, GameObject[] pool)
     {
-        int p = UnityEngine.Random.Range(0, pool.Count());
+        int p = UnityEngine.Random.Range(0, pool.Length);
         GameObject go = Instantiate(pool[p]);
         go.transform.parent = position;
         go.transform.localPosition = Vector3.zero;
