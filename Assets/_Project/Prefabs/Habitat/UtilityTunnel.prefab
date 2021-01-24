@@ -840,6 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6856347909792560466}
+  - component: {fileID: 5090481036965368092}
   m_Layer: 0
   m_Name: UtilityTunnel
   m_TagString: Untagged
@@ -876,6 +877,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5090481036965368092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083646989853863912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584eb23fbd50378499e9f2d4664ac2d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successors:
+  - {fileID: 7935641928793106613, guid: 69311e0f506a90742a84588aa273b538, type: 3}
+  - {fileID: 5700710513354742467, guid: 6699749d9a271734b9861ee6874089fb, type: 3}
+  - {fileID: 6083646989853863912}
+  accessories: []
+  accessoriesTakeTiles: 0
+  south: 1
+  west: 0
+  north: 1
+  east: 0
 --- !u!1 &6198689556615076346
 GameObject:
   m_ObjectHideFlags: 0

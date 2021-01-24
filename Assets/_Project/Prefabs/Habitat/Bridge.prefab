@@ -770,6 +770,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 584eb23fbd50378499e9f2d4664ac2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successors:
+  - {fileID: 5700710513354742467, guid: 6699749d9a271734b9861ee6874089fb, type: 3}
+  - {fileID: 6083646989853863912, guid: 576954a847a68c148b839170e2eab078, type: 3}
+  accessories:
+  - {fileID: 9156751040175619701}
+  - {fileID: 4035342100728475428}
+  closable: 1
+  north: 1
+  south: 1
+  west: 1
+  east: 1
 --- !u!1 &9039642768808842485
 GameObject:
   m_ObjectHideFlags: 0
