@@ -4,32 +4,49 @@ using UnityEngine;
 
 public class LevelBuilder : MonoBehaviour
 {
-    [SerializeField] Vector2 gridSize;
-    [SerializeField] float distance;
+    public float distance = 8;
     [SerializeField] GameObject seed;
     [SerializeField] GameObject gridRoot;
+    public int maxTiles;
+    public int currentTiles = 0;
 
-    private Vector2 offset;
+    private static LevelBuilder _instance;
+    public static LevelBuilder Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<LevelBuilder>();
+            }
+            return _instance;
+        }
+    }
 
     private void Awake()
     {
-        offset = new Vector2(-distance * Mathf.FloorToInt(gridSize.x/2),
-            distance * Mathf.FloorToInt(gridSize.y / 2));
+        seed.transform.parent = gridRoot.transform;
+        currentTiles++;
+    }
 
-        for (int x = 0; x < gridSize.x; x++)
+    public bool RegisterTile(Transform t, bool overrideCount = false)
+    {
+        string name = Mathf.RoundToInt(t.position.x / distance) + "," + Mathf.RoundToInt(t.position.z / distance);
+        if (transform.Find(name))
         {
-            for(int y = 0; y < gridSize.y; y++)
-            {
-                GameObject gridPoint = Instantiate(gridRoot, new Vector3(offset.x + (distance * x), 0, 
-                    offset.y + (-distance * y)), Quaternion.identity);
-
-                gridPoint.name = gridPoint.transform.position.x/distance + "," +
-                    gridPoint.transform.position.z/distance;
-                
-                gridPoint.transform.parent = transform;
-            }
+            return false;
         }
-        seed.transform.parent = transform.Find("0,0");
-        Destroy(gridRoot);
+        else
+        {
+            if (currentTiles < maxTiles)
+            {
+                t.name = name;
+                t.parent = this.transform;
+                currentTiles++;
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

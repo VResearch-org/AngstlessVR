@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363301aa22821b64f84feb88622f3698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 5, y: 5}
   distance: 8
   seed: {fileID: 0}
   gridRoot: {fileID: 473948874346055634}
+  maxTiles: 10
