@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 8069023779059151624}
   - component: {fileID: 6365052976436821165}
   - component: {fileID: 9201349628805498983}
-  - component: {fileID: 6086387383261919247}
   - component: {fileID: 6934437303306126905}
   m_Layer: 0
   m_Name: BridgeTeleportAreaMesh
@@ -253,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8069023779059151624
 Transform:
   m_ObjectHideFlags: 0
@@ -283,7 +282,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7255649523680176562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -295,7 +294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2bbbd01c5b7a6b4bb5a1316f21fc1ff, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -317,20 +316,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6086387383261919247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255649523680176562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locked: 0
-  markerActive: 1
 --- !u!64 &6934437303306126905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -629,6 +614,7 @@ MonoBehaviour:
   - {fileID: 8423371742152996189}
   - {fileID: 7452617991502572136}
   - {fileID: 2930729716604388759}
+  accessoryPositions: []
 --- !u!1 &9039642768808842485
 GameObject:
   m_ObjectHideFlags: 0
