@@ -177,36 +177,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5263460517821890789, guid: 31ce17b7700041d44a8279d63b6e022c, type: 3}
---- !u!1 &1327785122884199450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 446142141821437235}
-  m_Layer: 0
-  m_Name: North
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &446142141821437235
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327785122884199450}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6856347909792560466}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587522710994178336
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,36 +639,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.409943, y: 0.11814883, z: 2.4547877}
   m_Center: {x: -1.2049706, y: 3.8975592, z: 1.2496481}
---- !u!1 &4879403313860525989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4786058781471383826}
-  m_Layer: 0
-  m_Name: South
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4786058781471383826
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4879403313860525989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6856347909792560466}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5569019714807083922
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +729,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6856347909792560466}
-  - component: {fileID: 5090481036965368092}
   m_Layer: 0
   m_Name: UtilityTunnel
   m_TagString: Untagged
@@ -822,32 +761,9 @@ Transform:
   - {fileID: 3709405426044558987}
   - {fileID: 4123621604301801180}
   - {fileID: 6332549491566975520}
-  - {fileID: 446142141821437235}
-  - {fileID: 4786058781471383826}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5090481036965368092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6083646989853863912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 584eb23fbd50378499e9f2d4664ac2d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  successors:
-  - {fileID: 7935641928793106613, guid: 69311e0f506a90742a84588aa273b538, type: 3}
-  - {fileID: 5700710513354742467, guid: 6699749d9a271734b9861ee6874089fb, type: 3}
-  - {fileID: 6083646989853863912}
-  accessories: []
-  positions:
-  - {fileID: 446142141821437235}
-  - {fileID: 4786058781471383826}
-  accessoryPositions: []
 --- !u!1 &6198689556615076346
 GameObject:
   m_ObjectHideFlags: 0
