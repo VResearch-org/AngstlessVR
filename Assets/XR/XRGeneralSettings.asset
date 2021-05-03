@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: Standalone Settings
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: -3456083787677222839}
-  m_InitManagerOnStart: 0
+  m_InitManagerOnStart: 1
