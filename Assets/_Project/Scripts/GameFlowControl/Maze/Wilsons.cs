@@ -1,12 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Wilsons : Maze
 {
-    List<MapLocation> directions = new List<MapLocation>() {
-        new MapLocation(0, 1), new MapLocation(1, 0), new MapLocation(-1, 0), new MapLocation (0, -1)};
-
     List<MapLocation> notUsed = new List<MapLocation>();
 
     public override void Generate()
