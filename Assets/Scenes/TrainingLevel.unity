@@ -337,7 +337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218924068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -500, y: 0, z: -500}
+  m_LocalPosition: {x: -500, y: -0.001, z: -500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1719468997}
@@ -962,6 +962,9 @@ MonoBehaviour:
   habitatCorridor: {fileID: 5700710513354742467, guid: 6699749d9a271734b9861ee6874089fb, type: 3}
   utilityCorridor: {fileID: 6083646989853863912, guid: 576954a847a68c148b839170e2eab078, type: 3}
   bridge: {fileID: 7935641928793106613, guid: 69311e0f506a90742a84588aa273b538, type: 3}
+  greeenhouseFront: {fileID: 731174385646522725, guid: 2d82a45d7bffef444b326490df352592, type: 3}
+  greeenhouseMiddle: {fileID: 4946878979993117122, guid: dde2129bac1c3be43b509abe1d8f9560, type: 3}
+  greeenhouseBack: {fileID: 683393720514529149, guid: 73af1957c35f387478cd96bffd6741d8, type: 3}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0

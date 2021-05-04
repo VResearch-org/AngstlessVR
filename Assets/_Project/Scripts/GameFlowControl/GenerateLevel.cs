@@ -9,9 +9,14 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField] GameObject habitatCorridor;
     [SerializeField] GameObject utilityCorridor;
     [SerializeField] GameObject bridge;
+    [SerializeField] GameObject greeenhouseFront;
+    [SerializeField] GameObject greeenhouseMiddle;
+    [SerializeField] GameObject greeenhouseBack;
+
     public static int scale = 8;
-    public static int difficulty = 2;
+    public static int difficulty = 3;
     private int levels = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +63,18 @@ public class GenerateLevel : MonoBehaviour
         }
         else
         {
-            //instantiate greenhouse
+            Instantiate(greeenhouseFront, initialTransform + new Vector3(leftBack * scale, 0, -left * scale), Quaternion.identity);
+            Instantiate(greeenhouseFront, initialTransform + new Vector3(rightBack * scale, 0, right * scale), Quaternion.identity);
+            int greenhouseLeft = Random.Range(2, difficulty * 3);
+            int greenhouseRight = Random.Range(2, difficulty * 3);
+            for (int i = 1; i < greenhouseLeft; i++)
+                Instantiate(greeenhouseMiddle, initialTransform + new Vector3((leftBack + i) * scale, 0, -left * scale), Quaternion.identity);
+
+            for (int j = 1; j < greenhouseRight; j++)
+                Instantiate(greeenhouseMiddle, initialTransform + new Vector3((rightBack + j) * scale, 0, right * scale), Quaternion.identity);
+
+            Instantiate(greeenhouseBack, initialTransform + new Vector3((leftBack + greenhouseLeft) * scale, 0, -left * scale), Quaternion.identity);
+            Instantiate(greeenhouseBack, initialTransform + new Vector3((rightBack + greenhouseRight) * scale, 0, right * scale), Quaternion.identity);
         }
     }
 }
