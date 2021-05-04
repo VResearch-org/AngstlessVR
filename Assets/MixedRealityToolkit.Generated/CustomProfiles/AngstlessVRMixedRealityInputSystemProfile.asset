@@ -60,7 +60,7 @@ MonoBehaviour:
     componentName: Input Simulation Service
     priority: 0
     runtimePlatform: 209
-    deviceManagerProfile: {fileID: 11400000, guid: 41478039094d47641bf4e09c20e61a5a, type: 2}
+    deviceManagerProfile: {fileID: 11400000, guid: 5c03f57bd333a4c4a9d54de28e66b55e, type: 2}
   - componentType:
       reference: Microsoft.MixedReality.Toolkit.Input.InputRecordingService, Microsoft.MixedReality.Toolkit.Services.InputAnimation
     componentName: Input Recording Service

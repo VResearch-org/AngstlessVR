@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &787408106571796533
 Transform:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8690022327623097316
 Transform:
   m_ObjectHideFlags: 0
@@ -461,6 +461,8 @@ GameObject:
   - component: {fileID: 7501182340034583461}
   - component: {fileID: 5995754810721920095}
   - component: {fileID: 4401152892464973431}
+  - component: {fileID: 1711395478653122660}
+  - component: {fileID: 5824607251061049803}
   m_Layer: 0
   m_Name: DoorSliding01
   m_TagString: Untagged
@@ -544,6 +546,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.409943, y: 0.11814883, z: 2.4547877}
   m_Center: {x: 1.2049711, y: 3.8975592, z: 1.2496481}
+--- !u!65 &1711395478653122660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352494963032337697}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.93, y: 2.81, z: 2.4547877}
+  m_Center: {x: 1.2049711, y: 3.8975592, z: 1.2496481}
+--- !u!114 &5824607251061049803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352494963032337697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eb1b7b8db8b784dad58048e6021952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisOfRotation: 0
+  distance: 1.5
 --- !u!1 &4490258654970101956
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +585,8 @@ GameObject:
   - component: {fileID: 5571029946441482622}
   - component: {fileID: 3823959836924124324}
   - component: {fileID: 499494045496283883}
+  - component: {fileID: 2903079426527384754}
+  - component: {fileID: 8465061453299958283}
   m_Layer: 0
   m_Name: DoorSliding02
   m_TagString: Untagged
@@ -639,6 +670,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.409943, y: 0.11814883, z: 2.4547877}
   m_Center: {x: -1.2049706, y: 3.8975592, z: 1.2496481}
+--- !u!65 &2903079426527384754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490258654970101956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.93, y: 2.81, z: 2.4547877}
+  m_Center: {x: -1.2049706, y: 3.8975592, z: 1.2496481}
+--- !u!114 &8465061453299958283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490258654970101956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eb1b7b8db8b784dad58048e6021952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisOfRotation: 0
+  distance: -1.5
 --- !u!1 &5569019714807083922
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ public class GenerateLevel : MonoBehaviour
             Instantiate(habitatCorridor, initialTransform + new Vector3(0, 0, -i * scale), Quaternion.identity);
 
         for (int j = 1; j < right; j++)
-            Instantiate(habitatCorridor, initialTransform + new Vector3(0, 0, j * scale), Quaternion.identity);
+            Instantiate(habitatCorridor, initialTransform + new Vector3(0, 0, j * scale), Quaternion.Euler(0, 180, 0));
 
         Instantiate(bridge, initialTransform + new Vector3(0, 0, -left * scale), Quaternion.identity);
         Instantiate(window, initialTransform + new Vector3(-1 * scale, 0, -left * scale), Quaternion.Euler(0, 90, 0));
@@ -60,10 +60,10 @@ public class GenerateLevel : MonoBehaviour
             leftBack++;
 
         for (int i = 1; i < leftBack; i++)
-            Instantiate(utilityCorridor, initialTransform + new Vector3(i * scale, 0, -left * scale), Quaternion.Euler(0, 90, 0));
+            Instantiate(utilityCorridor, initialTransform + new Vector3(i * scale, 0, -left * scale), Quaternion.Euler(0, -90, 0));
 
         for (int j = 1; j < rightBack; j++)
-            Instantiate(utilityCorridor, initialTransform + new Vector3(j * scale, 0, right * scale), Quaternion.Euler(0, 90, 0));
+            Instantiate(utilityCorridor, initialTransform + new Vector3(j * scale, 0, right * scale), Quaternion.Euler(0, -90, 0));
 
         if (levels < difficulty)
         {
