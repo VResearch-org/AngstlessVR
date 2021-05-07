@@ -94,6 +94,13 @@ MonoBehaviour:
     priority: 0
     runtimePlatform: -1
     deviceManagerProfile: {fileID: 11400000, guid: cc2a0fa97d2f9f14996ffd20776bab57, type: 2}
+  - componentType:
+      reference: Microsoft.MixedReality.Toolkit.LeapMotion.Input.LeapMotionDeviceManager,
+        Microsoft.MixedReality.Toolkit.Providers.LeapMotion
+    componentName: Leap Motion Device Manager
+    priority: 0
+    runtimePlatform: 17
+    deviceManagerProfile: {fileID: 11400000, guid: c33dde6976554154d8fbcfba33b69638, type: 2}
   focusProviderType:
     reference: Microsoft.MixedReality.Toolkit.Input.FocusProvider, Microsoft.MixedReality.Toolkit.Services.InputSystem
   raycastProviderType:
@@ -108,4 +115,4 @@ MonoBehaviour:
   enableControllerMapping: 1
   controllerMappingProfile: {fileID: 11400000, guid: e775a9f492c97e6409cd773b58737729, type: 2}
   controllerVisualizationProfile: {fileID: 11400000, guid: ed4837b519c069f488fbee8f8bb5d93c, type: 2}
-  handTrackingProfile: {fileID: 11400000, guid: 7f1e3cd673742f94ca860ac7ae733024, type: 2}
+  handTrackingProfile: {fileID: 11400000, guid: 8c9c02b75dc032c42b83b526ba87d790, type: 2}
