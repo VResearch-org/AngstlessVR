@@ -14,7 +14,7 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField] GameObject greeenhouseBack;
 
     public static int scale = 8;
-    public static int difficulty = 3;
+    public static int difficulty = 2;
     public static int maxWidth = 9;
     private int levels = 0;
     private int currentWidth;
