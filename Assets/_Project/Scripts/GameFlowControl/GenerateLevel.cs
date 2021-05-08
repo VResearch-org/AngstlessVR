@@ -21,8 +21,7 @@ namespace VResearch.GameFlowControl
         private int levels = 0;
         private int currentWidth;
 
-        // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             Instantiate(window, new Vector3(-1 * scale, 0, 0), Quaternion.Euler(0, 90, 0));
             PopulateLevel(transform.position, maxWidth);

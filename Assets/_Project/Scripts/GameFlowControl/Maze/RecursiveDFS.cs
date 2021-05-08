@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace VResearch.GameFlowControl.Maze
@@ -9,7 +6,7 @@ namespace VResearch.GameFlowControl.Maze
     {
         public override void Generate()
         {
-            Generate(UnityEngine.Random.Range(1, width), UnityEngine.Random.Range(1, depth));
+            Generate(Random.Range(1, width), Random.Range(1, depth));
         }
 
         private void Generate(int x, int z)

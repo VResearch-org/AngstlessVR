@@ -1039,6 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   habitat: {fileID: 4012231935175966770, guid: e66a4946e1ff7fb48b6c5493057d1dc6, type: 3}
+  dimensions: {x: 4, y: 2, z: 8}
 --- !u!1 &6080158166826625389
 GameObject:
   m_ObjectHideFlags: 0
