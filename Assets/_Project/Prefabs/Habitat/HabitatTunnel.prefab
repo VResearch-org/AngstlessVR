@@ -1038,8 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99bd4c5039858845a7cb3686b8da41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  habitat: {fileID: 4012231935175966770, guid: e66a4946e1ff7fb48b6c5493057d1dc6, type: 3}
+  moduleType: 1
   dimensions: {x: 4, y: 2, z: 8}
+  habitat: {fileID: 4012231935175966770, guid: e66a4946e1ff7fb48b6c5493057d1dc6, type: 3}
 --- !u!1 &6080158166826625389
 GameObject:
   m_ObjectHideFlags: 0

@@ -610,6 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2960701043986253710, guid: 69311e0f506a90742a84588aa273b538, type: 3}
+    - {fileID: 4735261389779784034, guid: 69311e0f506a90742a84588aa273b538, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 69311e0f506a90742a84588aa273b538, type: 3}
 --- !u!1 &1008791332
 GameObject:
@@ -909,8 +910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assetsToSpawn:
   - assetPrefab: {fileID: 3225453163901673543, guid: 7ddf2c0246614824883f8c67839ff36c, type: 3}
-    amount: {x: 4, y: 7}
+    amount: {x: 10, y: 20}
     radius: 0.5
+    admissibleModules: 0000000001000000
 --- !u!114 &1743643630
 MonoBehaviour:
   m_ObjectHideFlags: 0

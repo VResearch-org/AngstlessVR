@@ -7,17 +7,23 @@ namespace VResearch.GameFlowControl
 {
     public class SpawnGameAssets : Singleton<SpawnGameAssets>
     {
+        public enum ModuleType
+        {
+            bridge, tunnel, habitat, greenhouse, all
+        };
         [Serializable]
         public class GameAsset
         {
             public GameObject assetPrefab;
             public Vector2 amount;
             public float radius;
-            public GameAsset(GameObject _assetPrefab, Vector2 _amount, float _radius)
+            public ModuleType[] admissibleModules;
+            public GameAsset(GameObject _assetPrefab, Vector2 _amount, float _radius, ModuleType[] _admissibleModules)
             {
                 assetPrefab = _assetPrefab;
                 amount = _amount;
                 radius = _radius;
+                admissibleModules = _admissibleModules;
             }
         }
 
@@ -42,7 +48,10 @@ namespace VResearch.GameFlowControl
                 int assetAmnt = UnityEngine.Random.Range((int)assetsToSpawn[i].amount.x, (int)assetsToSpawn[i].amount.y);
                 for (int j = 0; j < assetAmnt; j++)
                 {
-                    activeModules[j].SpawnAsset(assetsToSpawn[i]);
+                    int position = j;
+                    while (Array.IndexOf(assetsToSpawn[i].admissibleModules, activeModules[position].moduleType) == -1)
+                        position ++;
+                    activeModules[position % activeModules.Count].SpawnAsset(assetsToSpawn[i]);
                 }
             }
         }

@@ -701,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2581f773347f0a146bd54712ef862723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moduleType: 1
   dimensions: {x: 8, y: 2, z: 4}
 --- !u!1 &6198689556615076346
 GameObject:

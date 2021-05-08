@@ -6,6 +6,16 @@ namespace VResearch.GameFlowControl.Environment
 {
     abstract public class EnvironmentModule : MonoBehaviour
     {
+        public SpawnGameAssets.ModuleType moduleType;
+        [SerializeField] protected Vector3 dimensions;
+
+        protected virtual Vector3 GetPosition(float radius)
+        {
+            return transform.position + new Vector3(Random.Range(0 + radius, dimensions.x - radius) - dimensions.x / 2,
+                Random.Range(0 + radius, dimensions.y - radius),
+                Random.Range(0 + radius, dimensions.z - radius) - dimensions.z / 2);
+        }
+
         void Awake()
         {
             RegisterModule();
@@ -15,11 +25,6 @@ namespace VResearch.GameFlowControl.Environment
         private void RegisterModule()
         {
             SpawnGameAssets.Instance.RegisterModule(this);
-        }
-
-        protected virtual Vector3 GetPosition(float radius)
-        {
-            return Vector3.zero;
         }
 
         protected virtual void InitializeModule()
