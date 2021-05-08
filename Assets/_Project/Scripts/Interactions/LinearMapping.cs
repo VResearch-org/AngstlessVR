@@ -6,7 +6,10 @@
 using UnityEngine;
 
 //-------------------------------------------------------------------------
-public class LinearMapping : MonoBehaviour
+namespace VResearch.Interactions
 {
-	public float value;
+	public class LinearMapping : MonoBehaviour
+	{
+		public float value;
+	}
 }

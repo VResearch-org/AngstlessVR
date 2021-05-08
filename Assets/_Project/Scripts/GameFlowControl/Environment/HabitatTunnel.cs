@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HabitatTunnel : EnvironmentModule
+namespace VResearch.GameFlowControl.Environment
 {
-    [SerializeField] GameObject habitat;
-
-    protected override void InitializeModule()
+    public class HabitatTunnel : EnvironmentModule
     {
-        Instantiate(habitat, transform.position + new Vector3(1 * GenerateLevel.scale, 0, 0), Quaternion.Euler(0, 180, 0));
-        Instantiate(habitat, transform.position + new Vector3(-1 * GenerateLevel.scale, 0, 0), Quaternion.identity);
+        [SerializeField] GameObject habitat;
+
+        protected override void InitializeModule()
+        {
+            Instantiate(habitat, transform.position + new Vector3(1 * GenerateLevel.scale, 0, 0), Quaternion.Euler(0, 180, 0));
+            Instantiate(habitat, transform.position + new Vector3(-1 * GenerateLevel.scale, 0, 0), Quaternion.identity);
+        }
     }
 }

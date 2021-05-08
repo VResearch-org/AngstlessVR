@@ -1,25 +1,30 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using VResearch.GameFlowControl.Environment;
 
-public class SpawnGameAssets : Singleton<SpawnGameAssets>
+namespace VResearch.GameFlowControl
 {
-    [Serializable]
-    public class GameAsset
+    public class SpawnGameAssets : Singleton<SpawnGameAssets>
     {
-        public GameObject assetPrefab;
-        public Vector2 amount;
-        public GameAsset(GameObject _assetPrefab, Vector2 _amount)
+        [Serializable]
+        public class GameAsset
         {
-            assetPrefab = _assetPrefab;
-            amount = _amount;
+            public GameObject assetPrefab;
+            public Vector2 amount;
+            public GameAsset(GameObject _assetPrefab, Vector2 _amount)
+            {
+                assetPrefab = _assetPrefab;
+                amount = _amount;
+            }
         }
-    }
-    public GameAsset[] assetsToSpawn;
-    private List<EnvironmentModule> activeModules = new List<EnvironmentModule>();
 
-    public void RegisterModule(EnvironmentModule module)
-    {
-        activeModules.Add(module);
+        public GameAsset[] assetsToSpawn;
+        private List<EnvironmentModule> activeModules = new List<EnvironmentModule>();
+
+        public void RegisterModule(EnvironmentModule module)
+        {
+            activeModules.Add(module);
+        }
     }
 }
